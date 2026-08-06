@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GO ICON 3 | Scout Competition 2026</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#5C3B1E;
+      color:#333;
+    }
+
+    /* TOPBAR */
+    .topbar{
+      width:100%;
+      background:#5C3B1E;
+      color:white;
+      padding:8px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:14px;
+    }
+
+    .social-icons i{
+      margin-left:15px;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .social-icons i:hover{
+      color:#F28C28;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      width:100%;
+      background:#F28C28;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 5%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 5px 15px rgba(0,0,0,.1);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo img{
+      width:55px;
+    }
+
+    .logo h1{
+      color:white;
+      font-size:28px;
+    }
+
+    .menu{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .menu a:hover{
+      color:#5C3B1E;
+    }
+
+    /* CONTAINER */
+    .container{
+      width:100%;
+      padding:30px 5%;
+      display:grid;
+      grid-template-columns:3fr 1fr;
+      gap:25px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content{
+      background:#F28C28;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,.08);
+    }
+    /* HERO */
+    .hero{
+      background:linear-gradient(
+      rgba(92, 59, 30, 0),
+      rgba(242, 141, 40, 0)),
+      url('');
+      background-size:cover;
+      background-position:center;
+      border-radius:20px;
+      padding:50px;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:280px;
+    }
+
+    .hero-text h2{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .hero-text button{
+      padding:14px 25px;
+      border:none;
+      background:white;
+      color:#F28C28;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .hero-text button:hover{
+      background:#5C3B1E;
+      color:white;
+    }
+
+    .hero-image img{
+      width:260px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    /* TITLE */
+    .section-title{
+      margin-bottom:20px;
+      color:#5C3B1E;
+      border-left:6px solid #000000;
+      padding-left:12px;
+      font-size:28px;
+    }
+
+    /* CARDS */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-bottom:40px;
+    }
+
+    .card{
+      background:#FFF4E0;
+      padding:25px;
+      border-radius:18px;
+      transition:.3s;
+      border:2px solid transparent;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#F28C28;
+      box-shadow:0 10px 25px rgba(242,140,40,.25);
+    }
+
+    .card h3{
+      color:#5C3B1E;
+      margin-bottom:10px;
+    }
+
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:15px;
+      margin-bottom:40px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:15px;
+      transition:.3s;
+      object-fit:cover;
+      height:180px;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    /* PDF */
+    .pdf-links{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .pdf-links a{
+      background:#FFF4E0;
+      padding:18px;
+      border-radius:12px;
+      text-decoration:none;
+      color:#5C3B1E;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .pdf-links a:hover{
+      background:#F28C28;
+      color:white;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .sidebar-box{
+      background:rgb(255, 188, 112);
+      padding:20px;
+      border-radius:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .sidebar-box h3{
+      color:#5C3B1E;
+      margin-bottom:15px;
+    }
+
+    .poster{
+      width:100%;
+      border-radius:15px;
+    }
+
+    .download-btn{
+      width:100%;
+      padding:14px;
+      border:none;
+      background:#F28C28;
+      color:white;
+      border-radius:12px;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .download-btn:hover{
+      background:#5C3B1E;
+    }
+
+    .info-list{
+      padding-left:20px;
+      line-height:2;
+    }
+
+    .contact p{
+      margin-bottom:12px;
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:40px;
+      background:#F28C28;
+      color:rgb(255, 188, 112);
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      .container{
+        grid-template-columns:1fr;
+      }
+
+      .menu{
+        display:none;
+      }
+
+      .hero{
+        text-align:center;
+        justify-content:center;
+      }
+
+      .hero-text h2{
+        font-size:36px;
+      }
+
+      .hero-image img{
+        width:220px;
+        margin-top:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+
+    <div>
+      GO ICON 3 - Grand Opening Of As-Sakienah Scout Competition III
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/pesantren.assakienah" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/pm_assakienah/" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@AsSakienahTV" target="_blank" class="youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* ===== ICON WRAPPER ===== */
+.social-icons{
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== ICON STYLE ===== */
+.social-icons a{
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #ff7a00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.social-icons a:hover{
+    transform: translateY(-5px);
+    background: #222;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+    .social-icons a{
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+</style>
+    </div>
+
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="https://www.image2url.com/r2/default/images/1786059195649-65097cdc-3917-4964-a4da-ce3830c2ef48.png" alt="As-Sakienah">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="https://www.image2url.com/r2/default/images/1786059306906-e9adec82-27ef-4fb7-8132-9fd9e956bc9b.png" alt="Pangkalan">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="https://www.image2url.com/r2/default/images/1786059396592-96ddcea2-c25a-4f61-9ed7-981bd238b17f.png" alt="Kwarda">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="https://www.image2url.com/r2/default/images/1786059352102-26b3c810-c89d-4338-8255-bdd611cf56dc.png" alt="Jawa Barat">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="https://www.image2url.com/r2/default/images/1786059467153-f4e15bb7-152c-41d4-9228-c3d22e3db9e6.png" alt="Kemenag">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+       <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+      
+       <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+
+      <div class="logo">
+      <img src="" alt="">
+      <h1></h1>
+      
+    </div>
+
+    <ul class="menu">
+      <li><a href="https://forms.gle/usuNKNaL6UfzBeNj7">DAFTAR SEKARANG</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- CONTAINER -->
+  <div class="container">
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+      <!-- HERO -->
+      <div class="sidebar-box">
+        
+
+        <img class="poster"
+  
+        src="https://www.image2url.com/r2/default/images/1786059797035-84edf24b-3443-4635-9260-fefd94a238ac.png">
+
+    </div>
+
+      </section>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- POSTER -->
+      <div class="sidebar-box">
+
+        <img class="poster"
+        src="https://www.image2url.com/r2/default/images/1786059534735-9a9c56b3-dbfd-4110-8444-3fec4b513cba.png">
+
+      </div>
+
+      <!-- INFO -->
+      <div class="sidebar-box">
+
+        <h2>SURAT & PDF</h2>
+
+        <br>
+
+        <div class="pdf-links">
+
+          <a href="https://drive.google.com/file/d/1Em2SI7_15DJzzMvl5rAErk6Brzr7hO_r/view?usp=drive_link">📘 Juknis & juklak</a>
+          <a href="https://drive.google.com/file/d/1NcvJU5qQHUp9DmGROaaVqNhnhIk1IjUZ/view?usp=drive_link">📄 Surat Undangan</a> 
+          <a href="https://drive.google.com/file/d/1CZuFB3bQNB1A5cKX6tqmHUI2cHzxfhPj/view?usp=drive_link">📝 Rekomendasi</a>
+
+        </div>
+      
+    </div>
+
+      <!-- LOKASI -->
+
+      <div class="sidebar-box">
+
+  <h2>Lokasi Kegiatan</h2>
+
+  <br>
+
+  <div class="map-container">
+    <iframe
+      src="https://maps.google.com/maps?q=Pesantren%20Modern%20As-Sakienah%20Sliyeg%20Indramayu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+
+
+  <div class="location-info">
+
+    <h3>PM. As-Sakienah</h3>
+    <p>
+      Desa Tugu 
+    </p>
+    <p>
+      Kecamatan Sliyeg 
+    </p>
+    <p>
+      Kabupaten Indramayu
+    </p>
+    <p>
+      Provinsi Jawa Barat
+    </p>
+
+  </div>
+
+</aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 GO ICON 3 - Grand Opening Of As-Sakienah Scout Competition III
+  </footer>
+
+</body>
+</html>
