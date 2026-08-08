@@ -558,6 +558,65 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
   </div>
 
+  <!-- TOMBOL DAFTAR SEKARANG -->
+<a href="https://forms.gle/Ue4eEzZVB3WFec28A" 
+   class="floating-register-btn"
+   target="_blank"
+   rel="noopener noreferrer">
+  DAFTAR SEKARANG
+</a>
+
+<style>
+/* Tombol Daftar Sekarang */
+.floating-register-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 280px;
+  padding: 15px 20px;
+  
+  background: linear-gradient(135deg,  #c46c20, #ff7a00);
+  color: #fff;
+  
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  
+  z-index: 9999;
+  
+  transition: all 0.3s ease;
+}
+
+/* Efek saat mouse diarahkan */
+.floating-register-btn:hover {
+  transform: translateX(-50%) translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek saat tombol ditekan */
+.floating-register-btn:active {
+  transform: translateX(-50%) scale(0.97);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .floating-register-btn {
+    width: 88%;
+    max-width: 360px;
+    bottom: 15px;
+    padding: 14px 15px;
+    font-size: 16px;
+  }
+}
+</style>
+
 </aside>
 
   </div>
